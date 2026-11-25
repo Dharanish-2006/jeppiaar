@@ -1,23 +1,28 @@
-# QuantiX'26 – Hackathon site + Neon registration backend
+# QuantiX'26 – React hackathon site + Neon registration backend
 
-Static site (index.html, style.css, form.css, script.js) with a Vercel serverless
-function (`api/register.js`) that stores registrations in Neon Postgres.
+Stack: React 18 + Vite (frontend), Vercel serverless function `api/register.js`, Neon Postgres.
 
 ## Setup
-1. **Neon**: create a project at https://neon.tech, open the SQL Editor and run `schema.sql`.
-2. Copy the connection string from the Neon dashboard.
-3. **Local dev**
+1. **Neon** – create a project at https://neon.tech, open the SQL Editor, run `schema.sql`.
+2. Install and configure:
    ```
    npm install
-   cp .env.example .env.local     # paste your DATABASE_URL
-   npx vercel dev
+   cp .env.example .env.local      # paste your Neon DATABASE_URL
    ```
-   Open http://localhost:3000
-4. **Deploy**: push to GitHub, import in Vercel, add env var `DATABASE_URL`
-   (Settings → Environment Variables), then deploy.
+3. **Run locally with the API**: `npx vercel dev` → http://localhost:3000
+   (`npm run dev` runs the UI only; form submissions need `vercel dev`.)
+4. **Deploy**: push to GitHub → import in Vercel (Vite is auto-detected) →
+   add env var `DATABASE_URL` → deploy.
 
-## View registrations
-`SELECT * FROM registrations ORDER BY created_at DESC;` in the Neon SQL Editor.
+## Project layout
+```
+api/register.js              serverless endpoint (validation + Neon insert)
+src/App.jsx                  page composition
+src/components/              Navbar, Hero, Sections, RegistrationForm, Footer
+src/style.css, form.css      styles
+schema.sql                   run once in Neon
+```
 
-## To do
-- Update the event date in `index.html` (Details section, "Update Event Date").
+View registrations: `SELECT * FROM registrations ORDER BY created_at DESC;`
+
+TODO: replace "Update Event Date" in `src/components/Sections.jsx`.
