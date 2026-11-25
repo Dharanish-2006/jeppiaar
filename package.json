@@ -1,0 +1,13 @@
+{
+  "name": "quantix-26",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "QuantiX'26 college hackathon site with Neon registration backend",
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

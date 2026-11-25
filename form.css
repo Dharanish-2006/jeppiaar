@@ -1,0 +1,103 @@
+/* Registration form (loaded after style.css, overrides the old white iframe container) */
+
+.form-container {
+    background: #151c32;
+    border: 1px solid #29314c;
+    padding: 35px;
+    text-align: left;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.field {
+    margin-bottom: 18px;
+}
+
+.field label {
+    display: block;
+    font-size: 13px;
+    color: #c5c9d6;
+    margin-bottom: 7px;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    background: #0b1224;
+    color: white;
+    border: 1px solid #38305e;
+    border-radius: 7px;
+    padding: 12px 14px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.field textarea {
+    resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: #927cff;
+}
+
+.field.invalid input,
+.field.invalid select,
+.field.invalid textarea {
+    border-color: #ff6b6b;
+}
+
+.form-heading {
+    color: #a18cff;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 10px 0 15px;
+}
+
+.member-block {
+    margin-bottom: 4px;
+}
+
+.hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.submit-btn {
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.form-status {
+    margin-top: 18px;
+    font-size: 14px;
+    text-align: center;
+    min-height: 20px;
+}
+
+.form-status.success { color: #5be49b; }
+.form-status.error { color: #ff6b6b; }
+
+@media (max-width: 800px) {
+    .form-container { padding: 22px 16px; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+}

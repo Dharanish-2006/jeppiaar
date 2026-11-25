@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quantix'26 | College Hackathon</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"> QUANT<span>IX'26.</span></div>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#details">Details</a>
+                <a href="#domains">Domains</a>
+                <a href="#register">Register</a>
+            </div>
+
+            <a href="#register" class="nav-btn">Join Now</a>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="tag">THINK • SOLVE • INNOVATE</p>
+
+            <h1>
+                Think Beyond
+                Build <span>Beyond.</span>
+            </h1>
+
+            <p class="hero-description">
+                Join our college hackathon and collaborate
+                with creative minds to build innovative
+                solutions for real-world problems.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#register" class="primary-btn">
+                    Register Your Team →
+                </a>
+
+                <a href="#about" class="secondary-btn">
+                    Explore Event
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+            <div class="card-icon">⚡</div>
+            <h2>6 Hours</h2>
+            <p>Of Innovation & Creativity</p>
+            <div class="card-line"></div>
+            <h3>IDEAS MAKES BRIGHTER TOMORROW.</h3>
+        </div>
+
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+
+        <p class="section-tag">ABOUT THE EVENT</p>
+
+        <h2>Build Something <span>Meaningful.</span></h2>
+
+        <p class="section-description">
+            QuantiX is an open innovation hackathon
+            where students work together to identify
+            problems, develop creative solutions and
+            showcase their technical skills.
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+                <h3>💡 Innovation</h3>
+                <p>Transform creative ideas into solutions.</p>
+            </div>
+
+            <div class="feature">
+                <h3>🤝 Teamwork</h3>
+                <p>Collaborate and learn with other students.</p>
+            </div>
+
+            <div class="feature">
+                <h3>🚀 Experience</h3>
+                <p>Build projects and present your ideas.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Event Details -->
+    <section class="section details" id="details">
+
+        <p class="section-tag">EVENT INFORMATION</p>
+
+        <h2>Event <span>Details</span></h2>
+
+        <div class="detail-grid">
+
+            <div class="detail-card">
+                <h3>📅 Date</h3>
+                <p>Update Event Date</p>
+            </div>
+
+            <div class="detail-card">
+                <h3>⏱ Duration</h3>
+                <p>6 Hours</p>
+            </div>
+
+            <div class="detail-card">
+                <h3>📍 Venue</h3>
+                <p>3rd Floor Auditorium,
+                    Jeppiaar Institute of Technology.
+                </p>
+            </div>
+
+            <div class="detail-card">
+                <h3>👥 Team Size</h3>
+                <p>2–4 Members</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Domains -->
+    <section class="section" id="domains">
+
+        <p class="section-tag">EXPLORE THE POSSIBILITIES</p>
+
+        <h2>Innovation <span>Domains</span></h2>
+
+        <div class="domain-grid">
+
+            <div class="domain-card">🤖 Artificial Intelligence</div>
+            <div class="domain-card">🔐 Cybersecurity</div>
+            <div class="domain-card">🏥 Healthcare</div>
+            <div class="domain-card">🌱 Sustainability</div>
+            <div class="domain-card">📚 Education Technology</div>
+            <div class="domain-card">🌐 Open Innovation</div>
+
+        </div>
+
+    </section>
+
+    <!-- Registration -->
+    <section class="section registration" id="register">
+
+        <p class="section-tag">SECURE YOUR SPOT</p>
+
+        <h2>Ready to <span>Hack?</span></h2>
+
+        <p class="section-description">
+            Register your team and become part of
+            an exciting innovation experience.
+        </p>
+
+        <div class="form-container">
+
+            <form id="registerForm" novalidate>
+
+                <div class="form-row">
+                    <div class="field">
+                        <label for="teamName">Team Name *</label>
+                        <input type="text" id="teamName" name="teamName" maxlength="80" required>
+                    </div>
+                    <div class="field">
+                        <label for="teamSize">Team Size *</label>
+                        <select id="teamSize" name="teamSize" required>
+                            <option value="2">2 Members</option>
+                            <option value="3">3 Members</option>
+                            <option value="4">4 Members</option>
+                        </select>
+                    </div>
+                </div>
+
+                <h4 class="form-heading">Team Leader</h4>
+
+                <div class="form-row">
+                    <div class="field">
+                        <label for="leaderName">Full Name *</label>
+                        <input type="text" id="leaderName" name="leaderName" maxlength="80" required>
+                    </div>
+                    <div class="field">
+                        <label for="leaderEmail">Email *</label>
+                        <input type="email" id="leaderEmail" name="leaderEmail" maxlength="120" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="field">
+                        <label for="leaderPhone">Phone *</label>
+                        <input type="tel" id="leaderPhone" name="leaderPhone" maxlength="15" placeholder="10-digit mobile number" required>
+                    </div>
+                    <div class="field">
+                        <label for="college">College *</label>
+                        <input type="text" id="college" name="college" maxlength="120" value="Jeppiaar Institute of Technology" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="field">
+                        <label for="department">Department *</label>
+                        <input type="text" id="department" name="department" maxlength="80" required>
+                    </div>
+                    <div class="field">
+                        <label for="year">Year *</label>
+                        <select id="year" name="year" required>
+                            <option value="">Select year</option>
+                            <option>1st Year</option>
+                            <option>2nd Year</option>
+                            <option>3rd Year</option>
+                            <option>4th Year</option>
+                        </select>
+                    </div>
+                </div>
+
+                <h4 class="form-heading">Other Team Members</h4>
+                <div id="membersContainer"></div>
+
+                <h4 class="form-heading">Project</h4>
+
+                <div class="field">
+                    <label for="domain">Domain *</label>
+                    <select id="domain" name="domain" required>
+                        <option value="">Select domain</option>
+                        <option>Artificial Intelligence</option>
+                        <option>Cybersecurity</option>
+                        <option>Healthcare</option>
+                        <option>Sustainability</option>
+                        <option>Education Technology</option>
+                        <option>Open Innovation</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="idea">Idea / Problem Statement (optional)</label>
+                    <textarea id="idea" name="idea" rows="4" maxlength="1000"></textarea>
+                </div>
+
+                <!-- Honeypot: hidden from humans, bots fill it -->
+                <div class="hp" aria-hidden="true">
+                    <label for="website">Website</label>
+                    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                </div>
+
+                <button type="submit" class="primary-btn submit-btn" id="submitBtn">Register Team →</button>
+
+                <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+
+        <h2>Have Questions?</h2>
+
+        <p>Contact the Hackathon Organizing Team</p>
+
+        <p>Email: jeppiaarquantix@gmail.com</p>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3>QUANT<span>IX'26.</span></h3>
+
+        <p>Innovate. Collaborate. Create.</p>
+
+        <p>© 2026 QUANTIX. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
